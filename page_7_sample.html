@@ -1,0 +1,109 @@
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>実践的なプロンプト例</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        body {width: 1328px; height: 100vh; font-family: 'Noto Sans JP', sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0 auto;
+            overflow: hidden;}
+        .slide-container {
+            width: 1280px;
+            height: 100vh;
+            position: relative;
+        }
+        .heading {
+            font-size: 44pt;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        .content-text {
+            font-size: 32pt;
+        }
+        .sample-text {
+            font-size: 20pt;
+        }
+        .template-box {
+            background-color: #dbeafe;
+            border-left: 4px solid #0066cc;
+        }
+        .example-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #4caf50;
+        }
+    </style>
+</head>
+<body class="">
+  
+<div class="slide-container bg-white p-8 flex flex-col">
+<!-- Icon in top-left -->
+<div class="absolute top-6 left-6 text-6xl text-blue-700">
+<i class="fas fa-lightbulb"></i>
+</div>
+<!-- Slide Title -->
+<div class="mb-3 pt-1">
+<h1 class="heading text-center">実践的なプロンプト例</h1>
+</div>
+
+<!-- Main Content - Left Right Layout -->
+<div class="flex-grow">
+<div class="grid grid-cols-2 gap-6 h-full">
+<!-- Left: Template Example -->
+<div class="template-box p-4 rounded-lg flex flex-col">
+<div class="flex items-center mb-2">
+<i class="fas fa-clipboard-list text-3xl text-blue-700 mr-3"></i>
+<h3 class="text-2xl font-bold text-blue-700">基本テンプレート</h3>
+</div>
+<div class="bg-white p-4 rounded-lg border border-blue-200 sample-text leading-relaxed flex-grow">
+<p class="mb-2 font-bold text-blue-700" style="font-size: 16pt;">あなたは [専門家の役割] として行動してください。</p>
+<p class="mb-2 font-bold text-blue-700" style="font-size: 16pt;">私は [知りたいこと / やりたいこと] に取り組もうとしています。</p>
+<p class="mb-2 font-bold text-blue-700" style="font-size: 16pt;">以下の条件に基づいて教えてください：</p>
+<div class="ml-3 space-y-1 text-gray-700" style="font-size: 14pt;">
+<p>1. ゴール：〇〇を達成する</p>
+<p>2. 対象：初心者（専門知識なし）</p>
+<p>3. 出力形式：ステップバイステップ、わかりやすく</p>
+<p>4. トーン：丁寧・親しみやすく・シンプル</p>
+<p>5. 禁止事項：専門用語の多用、長文説明</p>
+</div>
+<p class="mt-2 font-bold text-blue-700" style="font-size: 16pt;">質問：「〇〇について教えてください」</p>
+</div>
+</div>
+
+<!-- Right: Practical Example -->
+<div class="example-box p-4 rounded-lg flex flex-col">
+<div class="flex items-center mb-2">
+<i class="fas fa-pen-fancy text-3xl text-green-600 mr-3"></i>
+<h3 class="text-2xl font-bold text-green-600">具体例：記事作成</h3>
+</div>
+<div class="bg-white p-4 rounded-lg border border-green-200 sample-text leading-relaxed flex-grow">
+<p class="mb-2 font-bold text-green-700" style="font-size: 16pt;">あなたはプロのライターとして行動してください。</p>
+<p class="mb-2 font-bold text-green-700" style="font-size: 16pt;">私はブログ初心者で、読まれる記事を書きたいです。</p>
+<p class="mb-2 font-bold text-green-700" style="font-size: 16pt;">以下の条件に基づいて教えてください：</p>
+<div class="ml-3 space-y-1 text-gray-700" style="font-size: 14pt;">
+<p>1. ゴール：SEOに強い1500文字の記事を作成</p>
+<p>2. 対象：20-30代のビジネスパーソン</p>
+<p>3. 出力形式：見出し構成と執筆のコツ</p>
+<p>4. トーン：親しみやすく、専門的に</p>
+<p>5. 禁止事項：硬すぎる表現、専門用語の羅列</p>
+</div>
+<p class="mt-2 font-bold text-green-700" style="font-size: 16pt;">質問：「リモートワークのメリット・デメリットについて記事を書くコツを教えて」</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Key Points Section -->
+<div class="bg-blue-100 border-l-4 border-blue-700 p-3 mt-2">
+<p class="text-lg text-center">
+<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+<span class="font-bold">ポイント：</span>
+左のテンプレートを使って、右のような具体的なプロンプトを作成しましょう！
+</p>
+</div>
+</div>
+
+</body></html> 

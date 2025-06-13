@@ -1,0 +1,165 @@
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>クイズ：本物の人間はどれ？</title>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+        body {width: 1328px; height: 100vh; font-family: 'Noto Sans JP', sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0 auto;
+            overflow: hidden;}
+        .slide-container {
+            width: 1280px;
+            height: 100vh;
+            position: relative;
+        }
+        .heading {
+            font-size: 44pt;
+            font-weight: 700;
+            color: #0066cc;
+        }
+        .content-text {
+            font-size: 24pt;
+        }
+        .quiz-option {
+            border: 3px solid #e5e7eb;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-color: white;
+            overflow: hidden;
+        }
+        .quiz-option:hover {
+            border-color: #0066cc;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.2);
+        }
+        .quiz-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .option-label {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #0066cc;
+            text-align: center;
+            padding: 15px;
+        }
+        .geometric-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: radial-gradient(#0066cc 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="">
+  
+<div class="slide-container bg-white p-8 flex flex-col">
+<!-- Geometric pattern background -->
+<div class="geometric-pattern"></div>
+<!-- Icon in top-left -->
+<div class="absolute top-6 left-6 text-6xl text-blue-700">
+<i class="fas fa-question-circle"></i>
+</div>
+<!-- Slide Title -->
+<div class="mb-8 pt-4">
+<h1 class="heading text-center">クイズ：本物の人間はどれ？</h1>
+</div>
+<!-- Quiz Instructions -->
+<div class="text-center mb-8">
+<p class="content-text">以下の3つのプロフィールから、<br/>本物の人間を選んでください</p>
+</div>
+
+<!-- Quiz Options -->
+<div class="flex justify-center gap-8 flex-grow">
+<!-- Option A -->
+<div class="quiz-option w-80 p-4" onclick="selectOption('A')">
+<div class="option-label">A</div>
+<img src="ea0b04a6-f49d-4440-b974-81097178fade.jpg?v=2" alt="Person A" class="quiz-image">
+</div>
+
+<!-- Option B -->
+<div class="quiz-option w-80 p-4" onclick="selectOption('B')">
+<div class="option-label">B</div>
+<img src="228b7142-c836-44cc-b131-ad7de73e4fa5.jpg?v=2" alt="Person B" class="quiz-image">
+</div>
+
+<!-- Option C -->
+<div class="quiz-option w-80 p-4" onclick="selectOption('C')">
+<div class="option-label">C</div>
+<img src="ChatGPT Image 2025年6月10日 16_14_44.png?v=2" alt="Person C" class="quiz-image">
+</div>
+</div>
+
+<!-- Answer feedback area -->
+<div id="feedback" class="text-center mt-8 text-2xl font-bold" style="min-height: 50px;"></div>
+</div>
+
+<script>
+function selectOption(option) {
+    const feedback = document.getElementById('feedback');
+    const options = document.querySelectorAll('.quiz-option');
+    
+    // Reset all options
+    options.forEach(opt => {
+        opt.style.borderColor = '#e5e7eb';
+        opt.style.backgroundColor = 'white';
+    });
+    
+    // Highlight selected option
+    const selectedOption = document.querySelector(`.quiz-option:nth-child(${option === 'A' ? '1' : option === 'B' ? '2' : '3'})`);
+    selectedOption.style.borderColor = '#0066cc';
+    selectedOption.style.backgroundColor = '#f0f7ff';
+    
+    // Show feedback (you can customize this based on which image is actually human)
+    feedback.innerHTML = `<span style="color: #0066cc;">選択: ${option}</span>`;
+    
+    // Add a reveal button after selection
+    setTimeout(() => {
+        if (!document.getElementById('revealBtn')) {
+            const revealBtn = document.createElement('button');
+            revealBtn.id = 'revealBtn';
+            revealBtn.innerHTML = '答えを表示';
+            revealBtn.style.cssText = `
+                background-color: #0066cc;
+                color: white;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: bold;
+                cursor: pointer;
+                margin-top: 10px;
+            `;
+            revealBtn.onclick = () => revealAnswer();
+            feedback.appendChild(document.createElement('br'));
+            feedback.appendChild(revealBtn);
+        }
+    }, 500);
+}
+
+function revealAnswer() {
+    // この部分は実際の答えに応じて変更してください
+    const feedback = document.getElementById('feedback');
+    feedback.innerHTML = `
+        <div style="color: #059669; font-size: 24px;">
+            <i class="fas fa-check-circle"></i> 正解は [実際の答えを入力] です！<br>
+            <span style="font-size: 18px; color: #6b7280;">
+                AIによって生成された画像の精度が向上し、見分けるのが困難になっています
+            </span>
+        </div>
+    `;
+}
+</script>
+
+</body></html> 
