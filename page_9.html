@@ -327,8 +327,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
         body {
-            width: 1920px; /* 16:9 */
-            height: 1080px; /* 16:9 */
+            width: 1328px;
+            height: 100vh;
             font-family: 'Noto Sans JP', sans-serif;
             background-color: white;
             color: #333;
@@ -336,36 +336,37 @@
             overflow: hidden; /* コンテンツがはみ出さないように */
         }
         .slide-container {
-            width: 100%;
-            height: 100%;
+            width: 1280px;
+            min-height: 892px; /* 高さをvwからvhに変更 */
             display: flex;
             flex-direction: column;
             justify-content: space-between; /* コンテンツを均等配置 */
-            padding: 80px; /* 適切なパディング */
+            padding: 40px; /* 適切なパディング */
             position: relative;
+            margin: 0 auto; /* body内で中央寄せ */
         }
         .heading {
-            font-size: 30pt;
+            font-size: 24pt;
             font-weight: 700;
             color: #0066cc;
         }
         .content-text {
-            font-size: 20pt;
+            font-size: 14pt;
         }
         .ethics-card {
             border-left: 4px solid #0066cc;
             background-color: #f0f7ff;
         }
         .ethics-icon {
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             background-color: #0066cc;
             color: white;
-            font-size: 24px;
+            font-size: 18px;
         }
         .implementation-note {
             background-color: #fff5f5;
@@ -380,7 +381,7 @@
             padding: 10px 16px;
             margin-top: 16px;
             margin-bottom: 16px;
-            font-size: 18pt;
+            font-size: 14pt;
         }
         .risk-box {
             background-color: #ffebe6;
@@ -388,7 +389,7 @@
             padding: 10px 16px;
             margin-top: 16px;
             margin-bottom: 16px;
-            font-size: 18pt;
+            font-size: 14pt;
         }
         .important-box {
             background-color: #fff5e6; /* light orange/yellow */
@@ -396,7 +397,7 @@
             padding: 10px 16px;
             margin-top: 16px;
             margin-bottom: 16px;
-            font-size: 18pt;
+            font-size: 14pt;
         }
     </style>
 </head>
@@ -440,7 +441,7 @@
                 <li><strong>参照URL:</strong>
                     <ul>
                         <li><a href="https://chatgpt.com/g/g-68144bb35678819198cd7811310ac8f3-shi-zuo-life-g-consulting" target="_blank" class="text-blue-700 underline">ライフグループコンサルティング向けGPTs</a></li>
-                        <li><a href="https://chatgpt.com/g/g-681c505e6c2081918651193d7f3e099f-shi-zuo-raihu" target="_blank" class="text-blue-700 underline">ライフグループ向けGPTs</a></li>
+                        <li><a href="https://chatgpt.com/g/g-681c505e6c2081918651193d7f3e099f-shi-zuo-raihu" target="_blank" class="text-blue-700 underline">行政書士法人ライフ向けGPTs</a></li>
                     </ul>
                 </li>
             </ul>
